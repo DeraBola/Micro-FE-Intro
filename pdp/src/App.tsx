@@ -5,12 +5,13 @@ import "home/tailwind";
 
 import Header from "home/Header";
 import Footer from "home/Footer";
+import PDPContent from "./components/PDPContent";
 
 
 const App = () => (
-  <div className="text-3xl mx-auto max-w-6xl">
+  <div className="mx-auto max-w-6xl">
   <Header/>
-  <div className="my-10 text-red-700">PDP Page Content</div>
+  <div className="my-10"><PDPContent /></div>
   <Footer/>
 </div>
 );

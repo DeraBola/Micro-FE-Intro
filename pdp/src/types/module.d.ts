@@ -7,4 +7,5 @@ declare module "home/Header" {
     const Footer: React.ComponentType;
     export default Footer;
   }
-  
+
+declare module "home/products";
