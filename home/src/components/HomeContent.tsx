@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { currency, getProducts } from "../products";
 
-// import { addToCart, useLoggedIn } from "cart/cart";
+import { addToCart, useLoggedIn } from "cart/cart";
 
 interface Product {
     id: number;
@@ -14,7 +14,7 @@ interface Product {
   }
 
 export default function HomeContent() {
-//   const loggedIn = useLoggedIn();
+  const loggedIn = useLoggedIn();
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function HomeContent() {
             <div className="flex-end">{currency?.format(product.price)}</div>
           </div>
           <div className="text-sm mt-4">{product?.description}</div>
-          {/* {loggedIn && (
+          {loggedIn && (
             <div className="text-right mt-2">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded"
@@ -45,7 +45,7 @@ export default function HomeContent() {
                 Add to Cart
               </button>
             </div>
-          )} */}
+          )}
         </div>
       ))}
     </div>

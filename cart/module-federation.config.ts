@@ -7,10 +7,10 @@ export const mfConfig = {
     cart: "cart@http://localhost:3000/remoteEntry.js",
   },
   exposes: {
-    "./cart": "./src/cart.js",
-    "./Login": "./src/Login.jsx",
-    "./MiniCart": "./src/MiniCart.jsx",
-    "./CartContent": "./src/CartContent.jsx",
+    "./cart": "./src/cart.ts",
+    "./Login": "./src/Login.tsx",
+    "./MiniCart": "./src/MiniCart.tsx",
+    "./CartContent": "./src/CartContent.tsx",
   },
   shared: ["react", "react-dom"],
 };
