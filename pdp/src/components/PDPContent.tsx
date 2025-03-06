@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { getProductById, currency } from "home/products";
 // import placeAddToCart from "addtocart/placeAddToCart";
 
 
 export default function PDPContent() {
-//   const { id } = useParams();
+  const { id } = useParams();
   const [product, setProduct] = useState<any>({});
-
-const id = 1;
 
   useEffect(() => {
     if (id) {
