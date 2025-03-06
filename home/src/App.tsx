@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
+import "remixicon/fonts/remixicon.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeContent from "./components/HomeContent";
