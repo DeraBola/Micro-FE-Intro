@@ -14,4 +14,5 @@ export const mfConfig = {
   },
   shared: ["react", "react-dom"],
   "tailwindcss": { singleton: true, requiredVersion: false },  // ✅ Ensure only one instance
+  // tailwindcss: { singleton: true, eager: true }, 
 };
