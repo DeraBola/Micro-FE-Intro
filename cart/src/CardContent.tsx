@@ -3,13 +3,25 @@ import React, { useState, useEffect } from "react";
 import { cart, clearCart } from "cart/cart";
 import { currency } from "home/products";
 
-export default function CartContent() {
-  const [items, setItems] = useState([]);
+interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
 
-  useEffect(
-    () => cart.subscribe((value: any) => setItems(value?.cartItems ?? [])),
-    []
-  );
+export default function CartContent() {
+  const [items, setItems] = useState<CartItem[]>([]);
+
+  useEffect(() => {
+    // Subscribe to cart updates
+    const subscription = cart.subscribe((value: any) =>
+      setItems(value?.cartItems ?? [])
+    );
+
+    return () => subscription.unsubscribe(); // ✅ Proper cleanup
+  }, []);
 
   return (
     <>

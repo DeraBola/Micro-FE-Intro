@@ -5,6 +5,7 @@ export interface Product {
   name: string;
   price: number;
   image: string;
+  description: string;
 }
 
 export const getProducts = (): Promise<Product[]> =>
@@ -17,3 +18,9 @@ export const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
 });
+
+// export default new Intl.NumberFormat("en-US", {
+//   style: "currency",
+//   currency: "USD",
+// });
+
